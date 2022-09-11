@@ -1,0 +1,115 @@
+
+  <div class="section ">
+    <div class="container text-center " dir="rtl">
+        <button type="button" class="btn btn-primary p-2"  (click)="show1()">الرياضيات</button>
+        <button type="button" class="btn btn-primary p-2"  (click)="show2()">الرسم</button>
+        <button type="button" class="btn btn-primary p-2"  (click)="show3()">الروبوتات</button>
+        <button type="button" class="btn btn-primary p-2"  (click)="show4()">الخط العربي</button>
+      </div>
+    
+  </div>
+  
+  
+  <div class="section " *ngIf="this.isButtonVisible1">
+    <div class="container text-center ">
+      <div class="card-plain " style="border-radius: 0px !important; border: 1px solid black;  ">
+        <table class="table table-bordered table-striped" dir="rtl">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">الرياضيات</th>
+              <th scope="col">الاسم</th>
+              <th scope="col">التلفون</th>
+              <th scope="col">العمر</th>
+              <th scope="col">الحالة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mathdatas of mathdata">
+              <th scope="row"> {{mathdatas.id}}</th>
+              <td>{{mathdatas.name}}</td>
+              <td>{{mathdatas.phone}}</td>
+              <td>{{mathdatas.age}}</td>
+              <td  *ngIf="mathdatas.type==1">كي جي</td>
+              <td  *ngIf="mathdatas.type==2">جونيور</td>
+              <td  *ngIf="mathdatas.type!=2&&mathdatas.type!=1"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section " *ngIf="this.isButtonVisible2">
+    <div class="container text-center ">
+      <div class="card-plain " style="border-radius: 0px !important; border: 1px solid black;  ">
+        <table class="table table-bordered table-striped" dir="rtl">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">الرسم</th>
+              <th scope="col">الاسم</th>
+              <th scope="col">التلفون</th>
+              <th scope="col">العمر</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let artdatas of artdata">
+              <th scope="row"> {{artdatas.id}}</th>
+              <td>{{artdatas.name}}</td>
+              <td>{{artdatas.phone}}</td>
+              <td>{{artdatas.age}}</td>          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section " *ngIf="this.isButtonVisible3">
+    <div class="container text-center ">
+      <div class="card-plain " style="border-radius: 0px !important; border: 1px solid black;  ">
+        <table class="table table-bordered table-striped" dir="rtl">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">الروبوتات</th>
+              <th scope="col">الاسم</th>
+              <th scope="col">التلفون</th>
+              <th scope="col">العمر</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let robotdatas of robotdata">
+              <th scope="row"> {{robotdatas.id}}</th>
+              <td>{{robotdatas.name}}</td>
+              <td>{{robotdatas.phone}}</td>
+              <td>{{robotdatas.age}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section " *ngIf="this.isButtonVisible4">
+    <div class="container text-center ">
+      <div class="card-plain " style="border-radius: 0px !important; border: 1px solid black;  ">
+        <table class="table table-bordered table-striped" dir="rtl">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">الخط</th>
+              <th scope="col">الاسم</th>
+              <th scope="col">التلفون</th>
+              <th scope="col">العمر</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let arabicdatas of arabicdata">
+              <th scope="row"> {{arabicdatas.id}}</th>
+              <td>{{arabicdatas.name}}</td>
+              <td>{{arabicdatas.phone}}</td>
+              <td>{{arabicdatas.age}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+

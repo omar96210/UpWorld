@@ -1,0 +1,71 @@
+<div class="wrapper" >
+    <div class="page-header" style="background-color: white;">
+        <div class="filter"></div>
+            <div class="container" >
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                      <div class="card card-register">
+                          <h3 class="title">Admin Page</h3>
+
+                          <form class="register-form"  [formGroup]="loginForm" (ngSubmit)="logindata(loginForm)"  >
+
+                            
+                            <label>UserName</label>
+                            <div class="input-group form-group-no-border" >
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-email-85"></i>
+                                </span>
+                              </div>
+                          
+                                <input type="text" class="form-control" placeholder="UserName"  formControlName="loginname" >
+                            </div>
+                          
+
+
+                            <label>Password</label>
+                            <div class="input-group form-group-no-border" >
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-key-25"></i>
+                                </span>
+                              </div>
+                                <input type="password" class="form-control" placeholder="Password"  formControlName="loginpass" >
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-danger btn-block btn-round" >Login</button>
+                          </form>
+                       
+                      </div>
+                    </div>
+                </div>
+        
+            </div>
+    </div>
+</div>
+<!-- 
+<form class="register-form"  [formGroup]="loginForm" (ngSubmit)="logindata(loginForm)"  >
+  <label>UserName</label>
+  <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+          <i class="nc-icon nc-email-85"></i>
+      </span>
+    </div>
+
+      <input type="text" class="form-control" placeholder="UserName" (focus)="focus=true" (blur)="focus=false" formControlName="loginname" >
+  </div>
+
+  <label>Password</label>
+  <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+          <i class="nc-icon nc-key-25"></i>
+      </span>
+    </div>
+      <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" formControlName="loginpass" >
+  </div>
+  <button class="btn btn-danger btn-block btn-round" >Login</button>
+</form> -->
